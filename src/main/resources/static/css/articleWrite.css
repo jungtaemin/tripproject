@@ -1,0 +1,31 @@
+.write-button{
+    display:flex;
+    justify-content: flex-end
+
+
+}
+
+
+.article-title{
+    display:flex;
+    align-items: center;
+}
+
+.article-date{
+    display:flex;
+
+}
+
+.flex-list{
+    display:flex;
+
+}
+
+
+.error-font{
+
+font-size:15px;
+            color:#D45A5A;
+            text-decoration: none;
+
+}
