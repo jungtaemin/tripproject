@@ -2,6 +2,7 @@ package com.tripproject.user.domain;
 
 
 import com.tripproject.article.domain.Article;
+import com.tripproject.study.domain.Study;
 import lombok.Builder;
 import lombok.Getter;
 import com.tripproject.shared.domain.BaseEntity;
@@ -39,6 +40,9 @@ public class User extends BaseEntity {
 
     @OneToMany(mappedBy = "user")
     private List<Article> articles= new ArrayList<>();
+
+    @OneToMany(mappedBy = "user")
+    private List<Study> studies= new ArrayList<>();
 
     protected User() {
     }

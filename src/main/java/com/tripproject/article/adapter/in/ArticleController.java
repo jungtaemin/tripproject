@@ -1,5 +1,6 @@
 package com.tripproject.article.adapter.in;
 
+import com.tripproject.article.application.ArticleDtoCardBox;
 import com.tripproject.article.application.port.in.ArticleQueriesUseCase;
 import com.tripproject.article.application.port.in.ArticleUseCase;
 import com.tripproject.user.application.port.in.UserQueriesUseCase;
@@ -13,8 +14,11 @@ import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+
+import java.util.List;
 
 @Slf4j
 @RequiredArgsConstructor
@@ -102,13 +106,41 @@ public class ArticleController {
     }
 
 
+    @GetMapping("/article/edit")
+    public String edit(@AuthenticationPrincipal PrincipalDetails principal,Model model) {
+        var edit = articleQueriesUseCase.edit(principal.getId());
+        var edit2 = articleQueriesUseCase.edit2(principal.getId());
+        model.addAttribute("edit", edit);
+        model.addAttribute("edit2", edit2);
+        return "article/articleEdit";
+
+    }
+
+    @GetMapping("/article/edit/form")
+    public String edit2(@RequestParam Long articleId,Model model){
+        ArticleDtoCardBox articleEdit = articleQueriesUseCase.getArticleEdit(articleId);
+
+        model.addAttribute("articleEdit", articleEdit);
+
+        return "article/articleEditForm";
+    }
+
+    @PostMapping("/article/edit/edit")
+    public String edit3(@RequestParam Long articleId,
+            @ModelAttribute ArticleDtoCardBox articleDtoCardBox){
+        articleQueriesUseCase.findId(articleId,articleDtoCardBox);
 
 
-//    public String MyArticle(@AuthenticationPrincipal PrincipalDetails principalDetails){
-//
-//
-//
-//    }
+        return "redirect:/article/edit";
+    }
+
+    @GetMapping("/article/edit/delete")
+    public String edit2(@RequestParam Long articleId){
+        var id = articleUseCase.delete(articleId);
+
+
+        return "redirect:/article/edit";
+    }
+
+
 }
-
-

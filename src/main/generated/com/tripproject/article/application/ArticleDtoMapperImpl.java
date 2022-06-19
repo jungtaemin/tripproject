@@ -7,7 +7,7 @@ import org.springframework.stereotype.Component;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2022-06-17T06:42:52+0900",
+    date = "2022-06-20T01:39:05+0900",
     comments = "version: 1.4.2.Final, compiler: javac, environment: Java 11.0.14 (Oracle Corporation)"
 )
 @Component
@@ -21,21 +21,21 @@ public class ArticleDtoMapperImpl implements ArticleDtoMapper {
 
         ArticleDtoCardBox articleDtoCardBox = new ArticleDtoCardBox();
 
+        articleDtoCardBox.setUserName( articleUserUserName( article ) );
         articleDtoCardBox.setId( article.getId() );
         articleDtoCardBox.setTitle( article.getTitle() );
         articleDtoCardBox.setContent( article.getContent() );
         articleDtoCardBox.setThumbnailUrl( article.getThumbnailUrl() );
-        articleDtoCardBox.setDateTrip( article.getDateTrip() );
-        articleDtoCardBox.setPreDate( article.getPreDate() );
-        articleDtoCardBox.setCostMoney( article.getCostMoney() );
-        articleDtoCardBox.setCountHuman( article.getCountHuman() );
         articleDtoCardBox.setCreatedDate( article.getCreatedDate() );
+        articleDtoCardBox.setUser( article.getUser() );
+        articleDtoCardBox.setHit( article.getHit() );
+        articleDtoCardBox.setBad( article.getBad() );
 
         return articleDtoCardBox;
     }
 
     @Override
-    public ArticleResponseForDetail detail(Article article) {
+    public ArticleResponseForDetail simple(Article article) {
         if ( article == null ) {
             return null;
         }
@@ -48,12 +48,25 @@ public class ArticleDtoMapperImpl implements ArticleDtoMapper {
         articleResponseForDetail.setContent( article.getContent() );
         articleResponseForDetail.setThumbnailUrl( article.getThumbnailUrl() );
         articleResponseForDetail.setCreatedDate( article.getCreatedDate() );
-        articleResponseForDetail.setDateTrip( article.getDateTrip() );
-        articleResponseForDetail.setPreDate( article.getPreDate() );
-        articleResponseForDetail.setCostMoney( article.getCostMoney() );
-        articleResponseForDetail.setCountHuman( article.getCountHuman() );
+        articleResponseForDetail.setHit( article.getHit() );
+        articleResponseForDetail.setBad( article.getBad() );
 
         return articleResponseForDetail;
+    }
+
+    private String articleUserUserName(Article article) {
+        if ( article == null ) {
+            return null;
+        }
+        User user = article.getUser();
+        if ( user == null ) {
+            return null;
+        }
+        String userName = user.getUserName();
+        if ( userName == null ) {
+            return null;
+        }
+        return userName;
     }
 
     private Long articleUserId(Article article) {

@@ -1,0 +1,45 @@
+.article-edit-grid{
+
+        display: grid;
+        grid-template-columns: 1fr 2fr 1fr;
+        grid-template-rows:213px 64px 700px 200px;
+        grid-template-areas:
+        "header1 header2 header3"
+        "menu menu menu"
+        "list1 list1 list2"
+        "paging paging paging";
+        gap: 10px;
+
+
+}
+
+
+.list1{
+    width:1400px;
+    display:grid;
+    justify-items: center;
+    width:500px;
+
+     border-width: 0 1px 1px;
+            border-style: solid;
+
+     padding:7px;
+}
+
+.list2{
+    width:1400px;
+    display:grid;
+    justify-items: center;
+    width:500px;
+
+     border-width: 0 1px 1px;
+            border-style: solid;
+     padding:7px;
+}
+
+.button-groups{
+    display:flex;
+    justify-content: flex-end
+
+
+}

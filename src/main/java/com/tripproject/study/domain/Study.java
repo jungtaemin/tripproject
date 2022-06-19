@@ -1,4 +1,4 @@
-package com.tripproject.article.domain;
+package com.tripproject.study.domain;
 
 import com.tripproject.shared.domain.BaseEntity;
 import com.tripproject.user.domain.User;
@@ -6,15 +6,15 @@ import lombok.Builder;
 import lombok.Getter;
 
 import javax.persistence.*;
-import java.time.LocalDateTime;
 
 
 @Entity
 @Getter
-public class Article extends BaseEntity {
+public class Study extends BaseEntity {
 
-    @Id @GeneratedValue
-    @Column(name = "article_id")
+    @Id
+    @GeneratedValue
+    @Column(name = "Study_id")
     private Long id;
 
     @Column(nullable = false, length = 50)
@@ -26,7 +26,6 @@ public class Article extends BaseEntity {
     private String thumbnailUrl;
 
 
-
     private Long hit;
     private Long bad;
 
@@ -34,27 +33,24 @@ public class Article extends BaseEntity {
     @JoinColumn(name = "user_id")
     private User user;
 
-    protected Article() {
+    protected Study() {
     }
 
     @Builder
-    public Article(String title, String content, String thumbnailUrl,User user) {
+    public Study(String title, String content, User user) {
         this.title = title;
         this.content = content;
-        this.thumbnailUrl = thumbnailUrl;
 
-        this.user =user;
+        this.user = user;
         this.hit = 0L;
         this.bad = 0L;
 
 
     }
 
-    public void edit(String content, String title){
+    public void edit(String content, String title) {
         this.content = content;
         this.title = title;
 
-
     }
-
 }

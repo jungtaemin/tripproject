@@ -25,9 +25,11 @@
 
 .event{
         grid-area:event;
+        display:flex;
         width:1000px;
         margin:0 auto;
         align-items: center;
+        justify-content: space-around;
 
 
       }
@@ -96,5 +98,18 @@
     padding-right:400px;
     background-color:#F2F2F2;
 
+
+}
+
+
+.article-top5{
+    display:flex;
+
+}
+
+.card-link{
+    font-size:15px;
+       color:rgb(85, 94, 94);
+       text-decoration: none;
 
 }

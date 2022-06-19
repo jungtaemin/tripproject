@@ -8,10 +8,10 @@
 
 
     <link rel="stylesheet" th:href="@{/css/main.css}" />
-    <link rel="stylesheet" th:href="@{/css/articleEdit.css}" />
+    <link rel="stylesheet" th:href="@{/css/articleWrite.css}" />
 </head>
 <body>
-<div class="article-list-grid">
+<div class="article-write-grid">
     <div class="header1">
         <a th:href="@{/}"><img src="/img/로고.png"> </a>
     </div>
@@ -62,17 +62,19 @@
                                     </td>
 
                                 </tr>
-                                <!--
-                                <tr>
-                                    <td>
-                                        <button class="btn"><a class="link-dark rounded ms-1 small" th:href="@{/}">관심여행목록</a></button>
-                                    </td>
-                                    <td>
-                                        <button class="btn"><a class="link-dark rounded ms-1 small" th:href="@{/}">MY신청목록</a></button>
-                                    </td>
 
-                                </tr> -->
-                                </tbody>
+                                <!--
+                               <tr>
+                                   <td>
+                                       <button class="btn"><a class="link-dark rounded ms-1 small" th:href="@{/}">관심여행목록</a></button>
+                                   </td>
+                                   <td>
+                                       <button class="btn"><a class="link-dark rounded ms-1 small" th:href="@{/}">MY신청목록</a></button>
+                                   </td>
+
+                               </tr>
+                               -->
+                               </tbody>
 
 
             </table>
@@ -130,6 +132,7 @@
         </table>
     </div>
 
+
     <!-- //////////////////////////////////////////////////////////////////////////////네비게이션바-->
     <div class="menu">
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -160,115 +163,72 @@
             </div>
         </nav>
     </div>
-    <!--dddddddddddddddddddddddddddddddddddd메뉴end bddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd -->
-    <div class="article-list">
-        <div class="text border">
-            <div class="list-buttongroup">
-                <div class="article-title-main" th:text="'다이어트 게시판'"></div><button type="button" class="btn btn-secondary">+목표</button>
+    <!--  메뉴 ///////////////////////////////////////////////////////////////////////////         -->
+
+    <div class="article-write">
+
+
+        <div class="container">
+            <div class="row justify-content-center mt-5 mb-3 g-0">
+
+                <div class="d-flex flex-row-reverse">
+
+                    <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#thumbnailModal">
+                        썸네일 등록
+                    </button>
+
+                    <div class="modal fade" id="thumbnailModal" tabindex="-1" aria-labelledby="thumbnailModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="thumbnailModalLabel">썸네일 등록</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-footer">
+
+                                    <input type="text" id="thumbnail-url-upload-input" class="form-control">
+                                    <button class="btn btn-secondary" id="thumbnail-url-upload-btn">URL 업로드</button>
+                                    <label class="btn btn-secondary" for="thumbnail">파일 업로드</label>
+                                    <input type="file" id="thumbnail" name="thumbnail" accept="image/*" class="d-none">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+
             </div>
+            <form method="post" th:object="${articleEdit}" enctype="multipart/form-data" th:action="@{/article/edit/edit(articleId=${articleEdit.id})}">
+
+
+                <div class="article-title">
+                    <select class="form-select" aria-label="Default select example" style="width:20%; height:37px;margin-right:15px">
+                        <option selected>카테고리를 선택하세요</option>
+                        <option value="1">국내여행</option>
+                        <option value="2">해외여행</option>
+                    </select>
+                    <div class="mb-3" style="width:80%;" >
+                        <label for="exampleFormControlInput1" class="form-label"></label>
+                        <input type="text" class="form-control"  id="exampleFormControlInput1" name="title" th:value="*{title}" placeholder="제목을 입력해주세요">
+                    </div>
+                    <span th:if="${#fields.hasErrors('title')}" class="error-font"  th:errors="*{title}"></span>
+                </div>
+
+                <div class="mb-3">
+                    <label for="exampleFormControlTextarea1" class="form-label">내용</label>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" name="content" th:value="*{content}"  th:text="*{content}" rows="15"></textarea>
+                </div>
+                <span th:if="${#fields.hasErrors('content')}" class="error-font"  th:errors="*{content}"></span>
+                <div class="write-button">
+                    <button type="reset" class="btn btn-secondary" style="margin-right:5px;">취소</button>
+                    <button class="btn btn-primary" type="submit">수정</button>
+                </div>
+            </form>
         </div>
-        <table class="table table-hover">
-            <thead>
-            <tr>
-                <th>
-                    <div th:text="번호"></div>
-                </th>
-                <th>
-                    <div th:text="제목"></div>
-                </th>
-                <th>
-                    <div th:text="작성자"></div>
-                </th>
-                <th>
-                    <div th:text="작성일"></div>
-                </th>
-                <th>
-                    <div th:text="추천"></div>
-                </th>
-            </tr>
-            </thead>
-            <tbody th:each="list:${articleList}">
-            <tr>
-
-                <td><a class="atag-none"   th:href="@{/article/view(articleId=${list.id})}">
-                    <div th:text="${list.id}"></div>
-
-                </a>
-                </td>
-
-                <td><a class="atag-none" th:href="@{/article/view(articleId=${list.id})}">
-                    <div  th:text="${list.title}"></div>
-                </a>
-                </td>
-
-                <td><a class="atag-none" th:href="@{/article/view(articleId=${list.id})}">
-                    <div th:text="${list.userName}"></div>
-                </a>
-                </td>
-
-                <td><a class="atag-none" th:href="@{/article/view(articleId=${list.id})}">
-                    <div th:text="${list.createdDate}"></div>
-                </a>
-                </td>
-
-                <td><a class="atag-none" th:href="@{/article/view(articleId=${list.id})}">
-                    <div th:text="${list.hit}"></div>
-                </a>
-                </td>
-            </tr>
-
-            </tbody>
-        </table>
-        <div class="list-buttongroup">
-            <div>
-                <button type="button" class="btn btn-outline-secondary"><a th:href="@{/article/list/new(page=(1))}">전체글</a></button>
-                <button type="button" class="btn btn-outline-secondary">개념글</button>
-            </div>
-
-            <button type="button" class="btn btn-outline-secondary"><a th:href="@{/article/write}">글쓰기</a></button>
-
-        </div>
-
     </div>
 
 
-    <!-- page~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-
-    <div class="article-paging">
-        <nav aria-label="Page navigation example">
-            <ul class="pagination">
-                <li class="page-item">
-                    <a class="page-link" href="#" aria-label="Previous">
-                        <span aria-hidden="true">&laquo;</span>
-                    </a>
-                </li>
-                <li class="page-item"><a class="page-link" th:href="@{/article/list/new(page=(1))}">1</a></li>
-                <li class="page-item"><a class="page-link" th:href="@{/article/list/new(page=(2))}">2</a></li>
-                <li class="page-item"><a class="page-link"th:href="@{/article/list/new(page=(3))}">3</a></li>
-                <li class="page-item"><a class="page-link"th:href="@{/article/list/new(page=(4))}">4</a></li>
-                <li class="page-item"><a class="page-link"th:href="@{/article/list/new(page=(5))}">5</a></li>
-                <li class="page-item"><a class="page-link"th:href="@{/article/list/new(page=(6))}">6</a></li>
-                <li class="page-item"><a class="page-link"th:href="@{/article/list/new(page=(7))}">7</a></li>
-                <li class="page-item"><a class="page-link"th:href="@{/article/list/new(page=(8))}">8</a></li>
-                <li class="page-item"><a class="page-link"th:href="@{/article/list/new(page=(9))}">9</a></li>
-                <li class="page-item"><a class="page-link"th:href="@{/article/list/new(page=(10))}">10</a></li>
-                <li class="page-item">
-                    <a class="page-link" href="#" aria-label="Next">
-                        <span aria-hidden="true">&raquo;</span>
-                    </a>
-                </li>
-            </ul>
-        </nav>
-
-
-        <form class="d-flex">
-            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" style="width:90%; height:35px;">
-            <button class="btn btn-outline-secondary" type="submit"><img src="/img/검색.png" style="width:17px; height:17px;"></button>
-        </form>
-    </div>
-</div>
-
-</div>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </body>
 </html>

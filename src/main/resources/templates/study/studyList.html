@@ -62,6 +62,7 @@
                             </td>
 
                         </tr>
+
                         <!--
                         <tr>
                             <td>
@@ -71,7 +72,7 @@
                                 <button class="btn"><a class="link-dark rounded ms-1 small" th:href="@{/}">MY신청목록</a></button>
                             </td>
 
-                        </tr>-->
+                        </tr> -->
                         </tbody>
 
 
@@ -130,6 +131,7 @@
     </table>
   </div>
 
+
   <!-- //////////////////////////////////////////////////////////////////////////////네비게이션바-->
   <div class="menu">
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -165,10 +167,10 @@
     <div class="text border">
 
       <div class="list-buttongroup">
-      <div class="article-title-main" th:text="'다이어트 게시판'"></div><button type="button" class="btn btn-secondary">+목표</button>
+      <div class="article-title-main" th:text="'공부 게시판'"></div><button type="button" class="btn btn-secondary">+목표</button>
       </div>
-
     </div>
+
   <table class="table table-hover">
     <thead>
     <tr>
@@ -189,31 +191,31 @@
       </th>
     </tr>
     </thead>
-    <tbody th:each="list:${articleList}">
+    <tbody th:each="list:${studyList}">
     <tr>
 
-        <td><a class="atag-none"   th:href="@{/article/view(articleId=${list.id})}">
+        <td><a class="atag-none"   th:href="@{/study/view(studyId=${list.id})}">
           <div th:text="${list.id}"></div>
 
         </a>
         </td>
 
-        <td><a class="atag-none" th:href="@{/article/view(articleId=${list.id})}">
+        <td><a class="atag-none" th:href="@{/study/view(studyId=${list.id})}">
           <div  th:text="${list.title}"></div>
         </a>
         </td>
 
-        <td><a class="atag-none" th:href="@{/article/view(articleId=${list.id})}">
+        <td><a class="atag-none" th:href="@{/study/view(studyId=${list.id})}">
           <div th:text="${list.userName}"></div>
         </a>
         </td>
 
-        <td><a class="atag-none" th:href="@{/article/view(articleId=${list.id})}">
+        <td><a class="atag-none" th:href="@{/study/view(studyId=${list.id})}">
           <div th:text="${list.createdDate}"></div>
         </a>
         </td>
 
-        <td><a class="atag-none" th:href="@{/article/view(articleId=${list.id})}">
+        <td><a class="atag-none" th:href="@{/study/view(studyId=${list.id})}">
           <div th:text="${list.hit}"></div>
         </a>
         </td>
@@ -223,13 +225,13 @@
   </table>
     <div class="list-buttongroup">
       <div>
-        <a th:href="@{/article/list/new(page=(1))}"><button type="button" class="btn btn-outline-secondary">전체글</button></a>
-        <button type="button" class="btn btn-outline-secondary">개념글</button>
+        <a th:href="@{/study/list/new(page=(1))}"><button type="button" class="btn btn-outline-secondary">전체글</button></a>
+      <button type="button" class="btn btn-outline-secondary">개념글</button>
       </div>
 
-      <a th:href="@{/article/write}"><button type="button" class="btn btn-outline-secondary">글쓰기</button></a>
+      <a th:href="@{/study/write}"><button type="button" class="btn btn-outline-secondary">글쓰기</button></a>
 
-    </div>
+      </div>
 
   </div>
 
@@ -244,16 +246,16 @@
           <span aria-hidden="true">&laquo;</span>
         </a>
       </li>
-      <li class="page-item"><a class="page-link" th:href="@{/article/list/new(page=(1))}">1</a></li>
-      <li class="page-item"><a class="page-link" th:href="@{/article/list/new(page=(2))}">2</a></li>
-      <li class="page-item"><a class="page-link"th:href="@{/article/list/new(page=(3))}">3</a></li>
-      <li class="page-item"><a class="page-link"th:href="@{/article/list/new(page=(4))}">4</a></li>
-      <li class="page-item"><a class="page-link"th:href="@{/article/list/new(page=(5))}">5</a></li>
-      <li class="page-item"><a class="page-link"th:href="@{/article/list/new(page=(6))}">6</a></li>
-      <li class="page-item"><a class="page-link"th:href="@{/article/list/new(page=(7))}">7</a></li>
-      <li class="page-item"><a class="page-link"th:href="@{/article/list/new(page=(8))}">8</a></li>
-      <li class="page-item"><a class="page-link"th:href="@{/article/list/new(page=(9))}">9</a></li>
-      <li class="page-item"><a class="page-link"th:href="@{/article/list/new(page=(10))}">10</a></li>
+      <li class="page-item"><a class="page-link" th:href="@{/study/list/new(page=(1))}">1</a></li>
+      <li class="page-item"><a class="page-link" th:href="@{/study/list/new(page=(2))}">2</a></li>
+      <li class="page-item"><a class="page-link"th:href="@{/study/list/new(page=(3))}">3</a></li>
+      <li class="page-item"><a class="page-link"th:href="@{/study/list/new(page=(4))}">4</a></li>
+      <li class="page-item"><a class="page-link"th:href="@{/study/list/new(page=(5))}">5</a></li>
+      <li class="page-item"><a class="page-link"th:href="@{/study/list/new(page=(6))}">6</a></li>
+      <li class="page-item"><a class="page-link"th:href="@{/study/list/new(page=(7))}">7</a></li>
+      <li class="page-item"><a class="page-link"th:href="@{/study/list/new(page=(8))}">8</a></li>
+      <li class="page-item"><a class="page-link"th:href="@{/study/list/new(page=(9))}">9</a></li>
+      <li class="page-item"><a class="page-link"th:href="@{/study/list/new(page=(10))}">10</a></li>
       <li class="page-item">
         <a class="page-link" href="#" aria-label="Next">
           <span aria-hidden="true">&raquo;</span>

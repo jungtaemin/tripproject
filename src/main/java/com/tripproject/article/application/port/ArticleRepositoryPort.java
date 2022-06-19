@@ -6,6 +6,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 
+import java.util.List;
 import java.util.Optional;
 
 
@@ -19,4 +20,9 @@ public interface ArticleRepositoryPort {
     public Page<Article> findByOrderByIdDesc(Pageable pageable);
 
     public Page<Article> findByOrderByIdAsc(Pageable pageable);
+    public List<Article> findTop5ByOrderByIdDesc();
+    public void deleteById(Long id);
+    public Article findArticleById(Long id);
+
+
 }

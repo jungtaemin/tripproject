@@ -9,7 +9,7 @@ import org.mapstruct.*;
         injectionStrategy = InjectionStrategy.CONSTRUCTOR,
         unmappedTargetPolicy = ReportingPolicy.ERROR
 )
-public interface ArticleDtoMapper {
+public interface ArticleDtoMapper2 {
 
     @Mappings({
             @Mapping(source = "article.user.userName", target = "userName"),

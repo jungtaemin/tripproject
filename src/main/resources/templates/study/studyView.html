@@ -8,10 +8,10 @@
 
 
     <link rel="stylesheet" th:href="@{/css/main.css}" />
-    <link rel="stylesheet" th:href="@{/css/articleEdit.css}" />
+    <link rel="stylesheet" th:href="@{/css/articleView.css}" />
 </head>
 <body>
-<div class="article-list-grid">
+<div class="article-view-grid">
     <div class="header1">
         <a th:href="@{/}"><img src="/img/로고.png"> </a>
     </div>
@@ -62,17 +62,18 @@
                                     </td>
 
                                 </tr>
-                                <!--
-                                <tr>
-                                    <td>
-                                        <button class="btn"><a class="link-dark rounded ms-1 small" th:href="@{/}">관심여행목록</a></button>
-                                    </td>
-                                    <td>
-                                        <button class="btn"><a class="link-dark rounded ms-1 small" th:href="@{/}">MY신청목록</a></button>
-                                    </td>
 
-                                </tr> -->
-                                </tbody>
+                                <!--
+                               <tr>
+                                   <td>
+                                       <button class="btn"><a class="link-dark rounded ms-1 small" th:href="@{/}">관심여행목록</a></button>
+                                   </td>
+                                   <td>
+                                       <button class="btn"><a class="link-dark rounded ms-1 small" th:href="@{/}">MY신청목록</a></button>
+                                   </td>
+
+                               </tr>-->
+                               </tbody>
 
 
             </table>
@@ -130,6 +131,9 @@
         </table>
     </div>
 
+
+
+
     <!-- //////////////////////////////////////////////////////////////////////////////네비게이션바-->
     <div class="menu">
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -151,7 +155,7 @@
                                 게시판 목록
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                <li><a class="dropdown-item"  th:href="@{/article/list/new(page=(1))}">다이어트 게시판</a></li>
+                                <<li><a class="dropdown-item"  th:href="@{/article/list/new(page=(1))}">다이어트 게시판</a></li>
                                 <li><a class="dropdown-item" th:href="@{/study/list/new(page=(1))}">공부 게시판</a></li>
                             </ul>
                         </li>
@@ -160,115 +164,43 @@
             </div>
         </nav>
     </div>
-    <!--dddddddddddddddddddddddddddddddddddd메뉴end bddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd -->
-    <div class="article-list">
-        <div class="text border">
-            <div class="list-buttongroup">
-                <div class="article-title-main" th:text="'다이어트 게시판'"></div><button type="button" class="btn btn-secondary">+목표</button>
+    <!--  //메뉴 끝///////////////////////////////////////////////////////////////////////////         -->
+
+
+    <div class="viewTitle" style="margin-right:100px; margin-left:100px">
+        <div>
+            <div class="f-middle" style="border-top: 1px solid;border-bottom: 1px solid;" th:text="${viewList.title}">
+                <!--<div class="f-middle" th:text="${user.userName}"></h5></div>-->
             </div>
-        </div>
-        <table class="table table-hover">
-            <thead>
-            <tr>
-                <th>
-                    <div th:text="번호"></div>
-                </th>
-                <th>
-                    <div th:text="제목"></div>
-                </th>
-                <th>
-                    <div th:text="작성자"></div>
-                </th>
-                <th>
-                    <div th:text="작성일"></div>
-                </th>
-                <th>
-                    <div th:text="추천"></div>
-                </th>
-            </tr>
-            </thead>
-            <tbody th:each="list:${articleList}">
-            <tr>
-
-                <td><a class="atag-none"   th:href="@{/article/view(articleId=${list.id})}">
-                    <div th:text="${list.id}"></div>
-
-                </a>
-                </td>
-
-                <td><a class="atag-none" th:href="@{/article/view(articleId=${list.id})}">
-                    <div  th:text="${list.title}"></div>
-                </a>
-                </td>
-
-                <td><a class="atag-none" th:href="@{/article/view(articleId=${list.id})}">
-                    <div th:text="${list.userName}"></div>
-                </a>
-                </td>
-
-                <td><a class="atag-none" th:href="@{/article/view(articleId=${list.id})}">
-                    <div th:text="${list.createdDate}"></div>
-                </a>
-                </td>
-
-                <td><a class="atag-none" th:href="@{/article/view(articleId=${list.id})}">
-                    <div th:text="${list.hit}"></div>
-                </a>
-                </td>
-            </tr>
-
-            </tbody>
-        </table>
-        <div class="list-buttongroup">
-            <div>
-                <button type="button" class="btn btn-outline-secondary"><a th:href="@{/article/list/new(page=(1))}">전체글</a></button>
-                <button type="button" class="btn btn-outline-secondary">개념글</button>
+            <div class="flex-only">
+                <div class="f-small" style="border-bottom: 1px solid;" th:text="${writer.userName}"></div>
+                <div class="button-goodbad">
+                    <div class="f-middle"  th:text="'추천:'"></div>
+                    <div class="f-middle"  th:text="${viewList.hit}"></div>
+                    <div class="f-middle"  th:text="'비추천:'"></div>
+                    <div class="f-middle"  th:text="${viewList.bad}"></div>
+                </div>
             </div>
 
-            <button type="button" class="btn btn-outline-secondary"><a th:href="@{/article/write}">글쓰기</a></button>
+
+
+            <div class="content">
+                <div class="f-middle" th:text="${viewList.content}"></div>
+            </div>
+            <div class="button-goodbad">
+                <button type="button" class="btn btn-outline-danger" style="margin:15px;">추천</button>
+                <button type="button" class="btn btn-outline-primary" style="margin:15px;">비추천</button>
+            </div>
 
         </div>
+
+
+
+
 
     </div>
 
 
-    <!-- page~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-
-    <div class="article-paging">
-        <nav aria-label="Page navigation example">
-            <ul class="pagination">
-                <li class="page-item">
-                    <a class="page-link" href="#" aria-label="Previous">
-                        <span aria-hidden="true">&laquo;</span>
-                    </a>
-                </li>
-                <li class="page-item"><a class="page-link" th:href="@{/article/list/new(page=(1))}">1</a></li>
-                <li class="page-item"><a class="page-link" th:href="@{/article/list/new(page=(2))}">2</a></li>
-                <li class="page-item"><a class="page-link"th:href="@{/article/list/new(page=(3))}">3</a></li>
-                <li class="page-item"><a class="page-link"th:href="@{/article/list/new(page=(4))}">4</a></li>
-                <li class="page-item"><a class="page-link"th:href="@{/article/list/new(page=(5))}">5</a></li>
-                <li class="page-item"><a class="page-link"th:href="@{/article/list/new(page=(6))}">6</a></li>
-                <li class="page-item"><a class="page-link"th:href="@{/article/list/new(page=(7))}">7</a></li>
-                <li class="page-item"><a class="page-link"th:href="@{/article/list/new(page=(8))}">8</a></li>
-                <li class="page-item"><a class="page-link"th:href="@{/article/list/new(page=(9))}">9</a></li>
-                <li class="page-item"><a class="page-link"th:href="@{/article/list/new(page=(10))}">10</a></li>
-                <li class="page-item">
-                    <a class="page-link" href="#" aria-label="Next">
-                        <span aria-hidden="true">&raquo;</span>
-                    </a>
-                </li>
-            </ul>
-        </nav>
-
-
-        <form class="d-flex">
-            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" style="width:90%; height:35px;">
-            <button class="btn btn-outline-secondary" type="submit"><img src="/img/검색.png" style="width:17px; height:17px;"></button>
-        </form>
-    </div>
-</div>
-
-</div>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </body>
 </html>

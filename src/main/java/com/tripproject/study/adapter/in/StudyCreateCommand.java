@@ -1,5 +1,6 @@
-package com.tripproject.article.adapter.in;
+package com.tripproject.study.adapter.in;
 
+import com.tripproject.study.domain.Study;
 import com.tripproject.user.domain.User;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -14,7 +15,7 @@ import java.time.LocalDateTime;
 
 @Getter
 @AllArgsConstructor
-public class ArticleCreateCommand {
+public class StudyCreateCommand {
 
 
     private String title;
@@ -22,13 +23,12 @@ public class ArticleCreateCommand {
 
     private String content;
 
-    private String thumbnailUrl;
 
 
     private Long id;
 
 
-    public static ArticleCreateCommand form(ArticleForm articleForm, Long id) {
-        return new ArticleCreateCommand(articleForm.getTitle(),articleForm.getContent(), articleForm.getThumbnailUrl(),id);
+    public static StudyCreateCommand form(StudyForm studyForm, Long id) {
+        return new StudyCreateCommand(studyForm.getTitle(),studyForm.getContent(),id);
     }
 }

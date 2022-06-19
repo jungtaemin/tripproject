@@ -1,17 +1,13 @@
-package com.tripproject.article.adapter.in;
+package com.tripproject.study.adapter.in;
 
 import lombok.Data;
-import lombok.Getter;
-import lombok.Setter;
 
 import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.NotNull;
-import java.time.LocalDateTime;
 
 @Data
-public class ArticleForm {
+public class StudyForm {
     /**
-     *  articleDTO
+     *  StudyDTO
      */
 
     @NotBlank(message = "제목을 입력해주세요")
@@ -19,8 +15,7 @@ public class ArticleForm {
 
     @NotBlank(message = "내용을 입력해주세요")
     private String content;
-
-    private String thumbnailUrl;
+    
 
 
 

@@ -8,7 +8,7 @@
 
 
     <link rel="stylesheet" th:href="@{/css/main.css}" />
-    <link rel="stylesheet" th:href="@{/css/articleView.css}" />
+    <link rel="stylesheet" th:href="@{/css/articleEdit.css}" />
 </head>
 <body>
 <div class="article-edit-grid">
@@ -46,34 +46,34 @@
                 </tr>
                 </thead>
 
-                                <tbody>
-                                <tr>
-                                    <td>
-                                        <div class="d-grid gap-2 d-md-block">
-                                            <a th:href="@{/article/edit}">
-                                                <button type="button" class="btn btn-secondary">내글 수정/삭제</button>
-                                            </a>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="d-grid gap-2 d-md-block">
-                                            <button type="button" class="btn btn-secondary">내 목표 게시판</button>
-                                        </div>
-                                    </td>
+                <tbody>
+                <tr>
+                    <td>
+                        <div class="d-grid gap-2 d-md-block">
+                            <a th:href="@{/article/edit}">
+                                <button type="button" class="btn btn-secondary">내글 수정/삭제</button>
+                            </a>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="d-grid gap-2 d-md-block">
+                            <button type="button" class="btn btn-secondary">내 목표 게시판</button>
+                        </div>
+                    </td>
 
-                                </tr>
+                </tr>
 
-                                <!--
-                                <tr>
-                                    <td>
-                                        <button class="btn"><a class="link-dark rounded ms-1 small" th:href="@{/}">관심여행목록</a></button>
-                                    </td>
-                                    <td>
-                                        <button class="btn"><a class="link-dark rounded ms-1 small" th:href="@{/}">MY신청목록</a></button>
-                                    </td>
+                <!--
+                <tr>
+                    <td>
+                        <button class="btn"><a class="link-dark rounded ms-1 small" th:href="@{/}">관심여행목록</a></button>
+                    </td>
+                    <td>
+                        <button class="btn"><a class="link-dark rounded ms-1 small" th:href="@{/}">MY신청목록</a></button>
+                    </td>
 
-                                </tr>-->
-                                </tbody>
+                </tr>-->
+                </tbody>
 
 
             </table>
@@ -162,34 +162,59 @@
             </div>
         </nav>
     </div>
-    <!--  //메뉴 끝///////////////////////////////////////////////////////////////////////////         -->
+    <!--dddddddddddddddddddddddddddddddddddd메뉴end bddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd -->
 
 
-    <div class="viewTitle" style="margin-right:100px; margin-left:100px">
-        <div>
-    <div class="f-middle" style="border-top: 1px solid;border-bottom: 1px solid;" th:text="${viewList.title}">
-        <!--<div class="f-middle" th:text="${user.userName}"></h5></div>-->
-    </div>
-            <div class="flex-only">
-            <div class="f-small" style="border-bottom: 1px solid;" th:text="${writer.userName}"></div>
-                <div class="button-goodbad">
-                <div class="f-middle"  th:text="'추천:'"></div>
-                <div class="f-middle"  th:text="${viewList.hit}"></div>
-                <div class="f-middle"  th:text="'비추천:'"></div>
-                <div class="f-middle"  th:text="${viewList.bad}"></div>
+        <div class="list1">
+
+        <b><div class="card-title" th:text="'다이어트 게시판'"></div></b>
+
+
+            <div th:each="edit:${edit}">
+                <a th:href="@{/article/view(articleId=${edit.id})}">
+                    <div class="card" style="width: 450px; margin:15px;" >
+                        <div class="card-body">
+                            <div th:text="${edit.title}"  class="card-link">Card link</div>
+                            <div class="article-top5">
+                                <div class="text border">
+                                    <div th:text="${edit.createdDate}"  class="card-link">Another link</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <div class="button-groups">
+                <button type="button" class="btn btn-outline-secondary"><a th:href="@{/article/edit/form(articleId=${edit.id})}">수정</a></button>
+                <a th:href="@{/article/edit/delete(articleId=${edit.id})}"><button type="button" class="btn btn-outline-danger">삭제</button></a>
                 </div>
             </div>
 
-
-
-    <div class="content">
-        <div class="f-middle" th:text="${viewList.content}"></div>
-    </div>
-        <div class="button-goodbad">
-        <button type="button" class="btn btn-outline-danger" style="margin:15px;">추천</button>
-        <button type="button" class="btn btn-outline-primary" style="margin:15px;">비추천</button>
         </div>
 
+            <div class="list2">
+            <b><div class="card-title" th:text="'공부 게시판'"></div></b>
+                <div th:each="edit2:${edit2}">
+                    <a th:href="@{/study/view(studyId=${edit2.id})}">
+                        <div class="card" style="width: 450px; margin:15px;" >
+                            <div class="card-body">
+                                <div th:text="${edit2.title}"  class="card-link">Card link</div>
+                                <div class="article-top5">
+                                    <div class="text border">
+                                        <div th:text="${edit2.createdDate}"  class="card-link">Another link</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <div class="button-groups">
+                    <button type="button" class="btn btn-outline-secondary"><a th:href="@{/study/edit/form(studyId=${edit2.id})}">수정</a></button>
+                    <a th:href="@{/study/edit/delete(studyId=${edit2.id})}"><button type="button" class="btn btn-outline-danger">삭제</button></a>
+                    </div>
+                </div>
+
+
+
+
     </div>
 
 
@@ -198,12 +223,10 @@
 
 
 
-
-
-
 </div>
 
 </div>
+
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </body>
 </html>

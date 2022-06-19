@@ -1,16 +1,14 @@
-package com.tripproject.article.application;
+package com.tripproject.study.application;
 
 
 import com.tripproject.user.domain.User;
 import lombok.Getter;
 import lombok.Setter;
 
-import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.NotNull;
 import java.time.LocalDateTime;
 
 @Getter @Setter
-public class ArticleDtoCardBox {
+public class StudyDtoCardBox {
 
     private Long id;
 
