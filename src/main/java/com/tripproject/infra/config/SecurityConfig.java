@@ -21,7 +21,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
       http
               //인가
               .authorizeRequests()
-              .antMatchers("/article/**").access("hasRole('ROLE_USER')")
+              .antMatchers("/article/write/**","/study/write/**","/article/edit/**","/study/edit/**").access("hasRole('ROLE_USER')")
               .anyRequest().permitAll()
 
               .and()
