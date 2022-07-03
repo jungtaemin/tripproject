@@ -34,12 +34,13 @@ crud를 다 적용시킬수 있음을 보여주려고 노력하였습니다.
 # 프로젝트 설계
 
 # 패키징 구조
-
-
-# 핵심 기능
 ![03](https://user-images.githubusercontent.com/96284736/177046629-2abea7a7-b9b4-4df9-a6a8-eb7ef30173fb.png)
 
-헥사고날 아키텍처
+**헥사고날 아키텍처**
+![zzzzz](https://user-images.githubusercontent.com/96284736/177046924-70c734bc-8157-4252-9852-175eaed14f1d.PNG)
+
+# 핵심 기능
+
 
 # 프로젝트 후기
 
