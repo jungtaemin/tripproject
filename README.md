@@ -4,30 +4,29 @@ JPA와 시큐리티를 학습후 그것들을 적용하여 게시판을 만들�
 # 목차
  - [사용 기술](https://github.com/jungtaemin/pizzasearch#사용-기술)
  - [프로젝트 설계](https://github.com/jungtaemin/pizzasearch#프로젝트-설계)
- - [프로젝트를 시작하면서..](https://github.com/jungtaemin/pizzasearch#프로젝트를-시작하면서..)
- - [검색되는 피자종류](https://github.com/jungtaemin/pizzasearch#검색되는-피자종류)
- - [주요 기능](https://github.com/jungtaemin/pizzasearch#주요-기능)
- - [기능 구현에 실패해 대체된 기능](https://github.com/jungtaemin/pizzasearch#기능-구현에-실패해-대체된-기능)
- - [진행하면서 배운것](https://github.com/jungtaemin/pizzasearch#진행하면서-배운것)
+ - [패키징 구조](https://github.com/jungtaemin/pizzasearch#프로젝트를-시작하면서..)
+ - [핵심 기능](https://github.com/jungtaemin/pizzasearch#주요-기능)
+ - [프로젝트 후기](https://github.com/jungtaemin/pizzasearch#기능-구현에-실패해-대체된-기능)
 # 사용 기술
 
 **프레임워크 / 라이브러리**
 
 - java 11 openjdk
 - springboot
-- maybatis
+- SpringBoot Security
+- SpringBoot Jpa
 
 **Build tool**
 - Gradle
 
 **Data base**
-- Oracle
+- mysql
 
-**view**
+**프론트엔드**
 - Thymeleaf
 - Bootstrap 5
 - html/css
-- 직접그린 일러스트
 
 **라이브러리**
 - Lombok
+- MapStruct
