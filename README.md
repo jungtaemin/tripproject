@@ -1,6 +1,6 @@
 # 자유게시판 프로젝트
-JPA와 시큐리티를 학습후 그것들을 적용하여 게시판을 만들었습니다.
- crud를 다 적용시킬수 있음을 보여주려고 노력하였습니다.
+JPA와 시큐리티를 학습후 그것들을 적용하여 게시판을 만들었습니다.<br/>
+crud를 다 적용시킬수 있음을 보여주려고 노력하였습니다.
 # 목차
  - [사용 기술](https://github.com/jungtaemin/pizzasearch#사용-기술)
  - [프로젝트 설계](https://github.com/jungtaemin/pizzasearch#프로젝트-설계)
