@@ -1,6 +1,6 @@
 # 자유게시판 프로젝트
-JPA와 시큐리티를 학습후 그것들을 적용하여 게시판을 만들어보았습니다. crud 를 전부 적용시킬 수 있는것을 보여주는것을 기본적인 목표로 잡고 시작했습니다.
-
+JPA와 시큐리티를 학습후 그것들을 적용하여 게시판을 만들었습니다.
+crud를 다 적용시킬수 있음을 보여주려고 노력하였습니다.
 # 목차
  - [사용 기술](https://github.com/jungtaemin/pizzasearch#사용-기술)
  - [프로젝트 설계](https://github.com/jungtaemin/pizzasearch#프로젝트-설계)
@@ -8,6 +8,7 @@ JPA와 시큐리티를 학습후 그것들을 적용하여 게시판을 만들�
  - [핵심 기능](https://github.com/jungtaemin/pizzasearch#주요-기능)
  - [프로젝트 후기](https://github.com/jungtaemin/pizzasearch#기능-구현에-실패해-대체된-기능)
 # 사용 기술
+
 
 **프레임워크 / 라이브러리**
 
@@ -30,3 +31,14 @@ JPA와 시큐리티를 학습후 그것들을 적용하여 게시판을 만들�
 **라이브러리**
 - Lombok
 - MapStruct
+# 프로젝트 설계
+
+# 패키징 구조
+
+
+# 핵심 기능
+![03](https://user-images.githubusercontent.com/96284736/177046629-2abea7a7-b9b4-4df9-a6a8-eb7ef30173fb.png)
+헥사고날 아키텍처
+
+# 프로젝트 후기
+
