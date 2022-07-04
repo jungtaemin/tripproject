@@ -5,6 +5,7 @@ import com.tripproject.article.application.ArticleResponseForDetail;
 import com.tripproject.article.domain.Article;
 import com.tripproject.study.application.StudyDtoCardBox;
 import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 
 import java.util.List;
 
@@ -21,4 +22,6 @@ public interface ArticleQueriesUseCase {
     ArticleDtoCardBox getArticleEdit(Long articleId);
 
     void findId(Long articleId, ArticleDtoCardBox articleDtoCardBox);
+
+    Page<ArticleDtoCardBox> getArticleSearchByKeyword(Pageable pageable, String keyword);
 }

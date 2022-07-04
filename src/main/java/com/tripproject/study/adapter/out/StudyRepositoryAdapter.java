@@ -1,5 +1,6 @@
 package com.tripproject.study.adapter.out;
 
+import com.tripproject.article.domain.Article;
 import com.tripproject.study.application.port.StudyRepositoryPort;
 import com.tripproject.study.domain.Study;
 import lombok.RequiredArgsConstructor;
@@ -50,5 +51,9 @@ public class StudyRepositoryAdapter implements StudyRepositoryPort {
 
         return studyRepository.findStudyById(studyid);
     }
+
+    public  Page<Study> findAllByKeywordOrderById(Pageable pageable, String keyword){
+        return studyRepository.findAllByKeywordOrderById(pageable,keyword);
+    };
 
 }

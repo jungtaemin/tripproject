@@ -12,6 +12,7 @@ import com.tripproject.user.domain.User;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -98,5 +99,12 @@ public class ArticleQueriesService implements ArticleQueriesUseCase {
         Article article = articleRepositoryPort.findById(articleId).orElseThrow();
         article.edit(articleDtoCardBox.getContent(),articleDtoCardBox.getTitle());
 
+    }
+
+
+    @Override
+    public Page<ArticleDtoCardBox> getArticleSearchByKeyword(Pageable pageable , String keyword) {
+        return articleRepositoryPort.findAllByKeywordOrderById(pageable,keyword)
+                .map(articleDtoMapper::cardBox);
     }
 }

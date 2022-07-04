@@ -10,6 +10,9 @@ import com.tripproject.user.application.port.in.response.PrincipalDetails;
 import com.tripproject.user.domain.User;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
+import org.springframework.data.web.PageableDefault;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -135,7 +138,17 @@ public class StudyController {
 
         return "redirect:/article/edit";
     }
+    @GetMapping("/study/list/search")
+    public String getArticleList(@PageableDefault(size = 5, sort = "id", direction = Sort.Direction.DESC) Pageable pageable,
+                                 @RequestParam String keyword, Model model){
 
+        var StudyList = studyQueriesUseCase.getStuedySearchByKeyword(pageable,keyword);
+
+        model.addAttribute("StudyList", StudyList);
+
+
+        return "study/studyListSearch";
+    }
 
 
 //    public String MyStudy(@AuthenticationPrincipal PrincipalDetails principalDetails){

@@ -5,6 +5,7 @@ import com.tripproject.article.domain.Article;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
+import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
@@ -49,5 +50,8 @@ public class ArticleRepositoryAdapter implements ArticleRepositoryPort {
          return articleRepository.findArticleById(articleid);
     }
 
+    public  Page<Article> findAllByKeywordOrderById(Pageable pageable,String keyword){
+        return articleRepository.findAllByKeywordOrderById(pageable,keyword);
+    };
 
 }

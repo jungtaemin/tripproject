@@ -1,6 +1,7 @@
 package com.tripproject.study.application.port;
 
 
+import com.tripproject.article.domain.Article;
 import com.tripproject.study.domain.Study;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
@@ -26,4 +27,6 @@ public interface StudyRepositoryPort {
 
     public Long deleteById(Long id);
     public Study findStudyById(Long id);
+
+    public  Page<Study> findAllByKeywordOrderById(Pageable pageable, String keyword);
 }
