@@ -69,7 +69,9 @@ crud를 다 적용시킬수 있음을 보여주려고 노력하였습니다.
 ## CRUD
 ![new](https://user-images.githubusercontent.com/96284736/177153407-665aa189-32ca-4d18-bac0-6ef263884a72.PNG)
 ![수정~~](https://user-images.githubusercontent.com/96284736/177154490-762396a5-436c-4054-9520-2176380cc3f3.PNG)
+
 ![수정함2](https://user-images.githubusercontent.com/96284736/177154506-f4b46468-fb6e-44a1-9674-29921cf707bb.PNG)
+[내 글 수정/삭제를 누르면 로그인된 아이디로 쓴 글만 게시판별로 나누어서 보여줍니다.]
 ![수정함3](https://user-images.githubusercontent.com/96284736/177154540-0bb2ab6f-4f9c-475e-a3eb-c874a9aad430.PNG)
 ## 내 글 삭제
 ![삭제함1](https://user-images.githubusercontent.com/96284736/177154769-57db37f5-25ce-4269-8cd4-4fc1d90d6fd9.PNG)
