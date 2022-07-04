@@ -37,11 +37,11 @@ crud를 다 적용시킬수 있음을 보여주려고 노력하였습니다.
 ![03](https://user-images.githubusercontent.com/96284736/177046629-2abea7a7-b9b4-4df9-a6a8-eb7ef30173fb.png)
 
 **헥사고날 아키텍처**<br/>
-내 프로젝트의 article의 패키징<br/>
+```내 프로젝트의 article의 패키징<br/>```
 ![zzzzz](https://user-images.githubusercontent.com/96284736/177046924-70c734bc-8157-4252-9852-175eaed14f1d.PNG)<br/>
-프로젝트 구조를 헥사고날 아키텍처로 하였습니다.
+```프로젝트 구조를 헥사고날 아키텍처로 하였습니다.
 
-아키텍처 확장에 용이하고 SOLID 원칙을 쉽게 적용할 수 있는 등 장점이 많아 헥사고날 아키텍처를 적용하였습니다.
+아키텍처 확장에 용이하고 SOLID 원칙을 쉽게 적용할 수 있는 등 장점이 많아 헥사고날 아키텍처를 적용하였습니다.```
 
 
 
@@ -55,7 +55,7 @@ crud를 다 적용시킬수 있음을 보여주려고 노력하였습니다.
 
 ![222222](https://user-images.githubusercontent.com/96284736/177118328-d9453773-4556-4a9d-9eb2-28cc04083ab7.PNG)
 
-소셜 로그인을 구현하기위해 스프링시큐리티와 OAuth2를 사용하였습니다. 
+``` 소셜 로그인을 구현하기위해 스프링시큐리티와 OAuth2를 사용하였습니다. ```
 
 ## validation
 ![vali1](https://user-images.githubusercontent.com/96284736/177123414-5d69066c-b1bb-4dc0-9798-da980709a0e1.PNG)
