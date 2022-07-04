@@ -48,6 +48,12 @@ crud를 다 적용시킬수 있음을 보여주려고 노력하였습니다.
 
 # 핵심 기능
 
+**Oauth2 소셜 로그인**
+![dddd](https://user-images.githubusercontent.com/96284736/177117919-f8bfda71-3dc3-4d8a-9d14-97cee6a7419d.PNG)
+
+![ddsda](https://user-images.githubusercontent.com/96284736/177117932-7a2b073d-689c-4aff-b873-879f190402a8.PNG)
+
+
 
 # 프로젝트 후기
 
