@@ -61,12 +61,13 @@ crud를 다 적용시킬수 있음을 보여주려고 노력하였습니다.
 ![vali1](https://user-images.githubusercontent.com/96284736/177123414-5d69066c-b1bb-4dc0-9798-da980709a0e1.PNG)
 ![vali2](https://user-images.githubusercontent.com/96284736/177123421-cb6dbcd7-b026-4a70-8169-37dccd859909.PNG)
 
-## 글쓰기
+## crud
+### 글등록
 ![1p](https://user-images.githubusercontent.com/96284736/177152969-b177ce42-365c-45bc-8529-4c185846e29a.PNG)
 ![2p](https://user-images.githubusercontent.com/96284736/177152976-6c0c1fba-e31f-4cfc-81eb-9d8075f19d5a.PNG)
 ![게시판~](https://user-images.githubusercontent.com/96284736/177153177-59eee828-7906-4dd1-9034-1a1551b321e0.PNG)
 
-## CRUD
+### 글수정
 ![new](https://user-images.githubusercontent.com/96284736/177153407-665aa189-32ca-4d18-bac0-6ef263884a72.PNG)
 
 
@@ -84,12 +85,18 @@ crud를 다 적용시킬수 있음을 보여주려고 노력하였습니다.
 
 
 
-``` 수정 버튼을 눌러 수정한 이미지 ```
+``` 수정 버튼을 눌러 수정한 이미지. 코드로는 service에서 변경감지를 사용해서 Article article = articleRepositoryPort.findById(articleId).orElseThrow();-article객체를 repositorty에서 꺼낸다음 article에 수정 메소드를 만든뒤 article.edit(articleDtoCardBox.getContent(),articleDtoCardBox.getTitle()); -article의 필드값을 변경하고 자동으로 transaction메소드가 끝나면 변경감지로 자동으로 수정되게한다. ```
 
 
-## 내 글 삭제
+### 글삭제
 ![삭제함1](https://user-images.githubusercontent.com/96284736/177154769-57db37f5-25ce-4269-8cd4-4fc1d90d6fd9.PNG)
 ![삭제함2](https://user-images.githubusercontent.com/96284736/177154777-6c556a5f-754a-40d8-90a8-5ebfbb47981b.PNG)
+
+
+
+``` 삭제 버튼을 눌러 삭제한 이미지.코드로는 jpaRepository에서 articleRepository.deleteById(id) 메소드로 articleId로 삭제 ```
+
+
 ## 검색
 ![검색함](https://user-images.githubusercontent.com/96284736/177154955-63e6cd20-7890-4cbb-aad6-15a454f40ef1.PNG)
 ![검색함2](https://user-images.githubusercontent.com/96284736/177154958-4c1ae32b-cc7a-43fc-ad7c-03bd1237cdf3.PNG)
