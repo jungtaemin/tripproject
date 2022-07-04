@@ -55,11 +55,15 @@ crud를 다 적용시킬수 있음을 보여주려고 노력하였습니다.
 
 ![222222](https://user-images.githubusercontent.com/96284736/177118328-d9453773-4556-4a9d-9eb2-28cc04083ab7.PNG)
 
-``` 소셜 로그인을 구현하기위해 스프링시큐리티와 OAuth2를 사용하였습니다. ```
+``` 소셜 로그인을 구현하기위해 스프링시큐리티와 OAuth2를 사용하였습니다.로그인을 하지않으면 글이 등록되지않게 시큐리티의 인가기능으로  로그인된 회원만 글쓰기 권한을 주었습니다.```
 
 ## validation
 ![vali1](https://user-images.githubusercontent.com/96284736/177123414-5d69066c-b1bb-4dc0-9798-da980709a0e1.PNG)
 ![vali2](https://user-images.githubusercontent.com/96284736/177123421-cb6dbcd7-b026-4a70-8169-37dccd859909.PNG)
+
+
+```articleForm을 만들어 먼저 view로 폼을 보내서 입력값을 받아 @Validated 로 validation을 적용.글의 내용과 제목을 다 적지않으면 글이 등록되지않으며 글을 적어주세요라는 오류메세지와함께 다시 작성폼으로 돌아온다.  ```
+
 
 ## crud
 ### 글등록
