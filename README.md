@@ -70,9 +70,9 @@ crud를 다 적용시킬수 있음을 보여주려고 노력하였습니다.
 ![1p](https://user-images.githubusercontent.com/96284736/177152969-b177ce42-365c-45bc-8529-4c185846e29a.PNG)
 ```게시글 1페이지```
 ![2p](https://user-images.githubusercontent.com/96284736/177152976-6c0c1fba-e31f-4cfc-81eb-9d8075f19d5a.PNG)
-```게시글 2페이지```
+```게시글 2페이지-글쓰기폼에서 validation을 거치면 글이 등록되는데 최신순 10개씩 페이지가 나뉘어 10개가 넘어 페이지가 2페이지로 넘어갔다.jpa 페이징기능을 사용하여 구현하였다.```
 ![게시판~](https://user-images.githubusercontent.com/96284736/177153177-59eee828-7906-4dd1-9034-1a1551b321e0.PNG)
-
+```게시글을 클릭하면 나오는 게시글 상세 페이지 ```
 ### 글수정
 ![new](https://user-images.githubusercontent.com/96284736/177153407-665aa189-32ca-4d18-bac0-6ef263884a72.PNG)
 
