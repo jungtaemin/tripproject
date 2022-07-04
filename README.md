@@ -93,6 +93,11 @@ crud를 다 적용시킬수 있음을 보여주려고 노력하였습니다.
 ## 검색
 ![검색함](https://user-images.githubusercontent.com/96284736/177154955-63e6cd20-7890-4cbb-aad6-15a454f40ef1.PNG)
 ![검색함2](https://user-images.githubusercontent.com/96284736/177154958-4c1ae32b-cc7a-43fc-ad7c-03bd1237cdf3.PNG)
+
+
+``` 쿼리 메소드 @Query 어노테이션을 사용 like %:??% 를 써서 제목과 내용으로 검색되게 만들었습니다. ```
+
+
 ## 최신글보기
 ![최신순글](https://user-images.githubusercontent.com/96284736/177155177-fae61f5e-61ff-45ed-8dac-35ea9ac1385f.PNG)
 
