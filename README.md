@@ -59,7 +59,16 @@ crud를 다 적용시킬수 있음을 보여주려고 노력하였습니다.
 ![vali1](https://user-images.githubusercontent.com/96284736/177123414-5d69066c-b1bb-4dc0-9798-da980709a0e1.PNG)
 ![vali2](https://user-images.githubusercontent.com/96284736/177123421-cb6dbcd7-b026-4a70-8169-37dccd859909.PNG)
 
+**글쓰기**
+![1p](https://user-images.githubusercontent.com/96284736/177152969-b177ce42-365c-45bc-8529-4c185846e29a.PNG)
+![2p](https://user-images.githubusercontent.com/96284736/177152976-6c0c1fba-e31f-4cfc-81eb-9d8075f19d5a.PNG)
+![게시판~](https://user-images.githubusercontent.com/96284736/177153177-59eee828-7906-4dd1-9034-1a1551b321e0.PNG)
 
+**내 글 수정/삭제**
+![new](https://user-images.githubusercontent.com/96284736/177153407-665aa189-32ca-4d18-bac0-6ef263884a72.PNG)
+![수정~~](https://user-images.githubusercontent.com/96284736/177154490-762396a5-436c-4054-9520-2176380cc3f3.PNG)
+![수정함2](https://user-images.githubusercontent.com/96284736/177154506-f4b46468-fb6e-44a1-9674-29921cf707bb.PNG)
+![수정함3](https://user-images.githubusercontent.com/96284736/177154540-0bb2ab6f-4f9c-475e-a3eb-c874a9aad430.PNG)
 
 # 프로젝트 후기
 
