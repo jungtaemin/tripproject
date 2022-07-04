@@ -62,7 +62,7 @@ crud를 다 적용시킬수 있음을 보여주려고 노력하였습니다.
 ![vali2](https://user-images.githubusercontent.com/96284736/177123421-cb6dbcd7-b026-4a70-8169-37dccd859909.PNG)
 
 
-```articleForm을 만들어 먼저 view로 폼을 보내서 입력값을 받아 @Validated 로 validation을 적용.글의 내용과 제목을 다 적지않으면 글이 등록되지않으며 글을 적어주세요라는 오류메세지와함께 다시 작성폼으로 돌아온다.  ```
+```articleForm을 만들어 먼저 view로 폼을 보내서 입력값을 받아 @Validated 로 validation을 적용.글의 내용과 제목을 다 적지않으면 글이 등록되지않으며 각각 제목을 적어주세요,내용을  오류메세지와함께 다시 작성폼으로 돌아온다.  ```
 
 
 ## crud
