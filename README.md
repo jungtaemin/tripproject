@@ -55,6 +55,10 @@ crud를 다 적용시킬수 있음을 보여주려고 노력하였습니다.
 
 ![222222](https://user-images.githubusercontent.com/96284736/177118328-d9453773-4556-4a9d-9eb2-28cc04083ab7.PNG)
 
+**validation**
+![vali1](https://user-images.githubusercontent.com/96284736/177123414-5d69066c-b1bb-4dc0-9798-da980709a0e1.PNG)
+![vali2](https://user-images.githubusercontent.com/96284736/177123421-cb6dbcd7-b026-4a70-8169-37dccd859909.PNG)
+
 
 
 # 프로젝트 후기
