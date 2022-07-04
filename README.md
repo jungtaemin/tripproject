@@ -48,34 +48,34 @@ crud를 다 적용시킬수 있음을 보여주려고 노력하였습니다.
 
 # 핵심 기능
 
-### Oauth2 소셜 로그인
+## Oauth2 소셜 로그인
 ![dddd](https://user-images.githubusercontent.com/96284736/177117919-f8bfda71-3dc3-4d8a-9d14-97cee6a7419d.PNG)
 
 ![ddsda](https://user-images.githubusercontent.com/96284736/177117932-7a2b073d-689c-4aff-b873-879f190402a8.PNG)
 
 ![222222](https://user-images.githubusercontent.com/96284736/177118328-d9453773-4556-4a9d-9eb2-28cc04083ab7.PNG)
 
-**validation**
+## validation
 ![vali1](https://user-images.githubusercontent.com/96284736/177123414-5d69066c-b1bb-4dc0-9798-da980709a0e1.PNG)
 ![vali2](https://user-images.githubusercontent.com/96284736/177123421-cb6dbcd7-b026-4a70-8169-37dccd859909.PNG)
 
-### 글쓰기
+## 글쓰기
 ![1p](https://user-images.githubusercontent.com/96284736/177152969-b177ce42-365c-45bc-8529-4c185846e29a.PNG)
 ![2p](https://user-images.githubusercontent.com/96284736/177152976-6c0c1fba-e31f-4cfc-81eb-9d8075f19d5a.PNG)
 ![게시판~](https://user-images.githubusercontent.com/96284736/177153177-59eee828-7906-4dd1-9034-1a1551b321e0.PNG)
 
-### 내 글 수정
+## 내 글 수정
 ![new](https://user-images.githubusercontent.com/96284736/177153407-665aa189-32ca-4d18-bac0-6ef263884a72.PNG)
 ![수정~~](https://user-images.githubusercontent.com/96284736/177154490-762396a5-436c-4054-9520-2176380cc3f3.PNG)
 ![수정함2](https://user-images.githubusercontent.com/96284736/177154506-f4b46468-fb6e-44a1-9674-29921cf707bb.PNG)
 ![수정함3](https://user-images.githubusercontent.com/96284736/177154540-0bb2ab6f-4f9c-475e-a3eb-c874a9aad430.PNG)
-### 내 글 삭제
+## 내 글 삭제
 ![삭제함1](https://user-images.githubusercontent.com/96284736/177154769-57db37f5-25ce-4269-8cd4-4fc1d90d6fd9.PNG)
 ![삭제함2](https://user-images.githubusercontent.com/96284736/177154777-6c556a5f-754a-40d8-90a8-5ebfbb47981b.PNG)
-### 검색
+## 검색
 ![검색함](https://user-images.githubusercontent.com/96284736/177154955-63e6cd20-7890-4cbb-aad6-15a454f40ef1.PNG)
 ![검색함2](https://user-images.githubusercontent.com/96284736/177154958-4c1ae32b-cc7a-43fc-ad7c-03bd1237cdf3.PNG)
-### 최신글보기
+## 최신글보기
 ![최신순글](https://user-images.githubusercontent.com/96284736/177155177-fae61f5e-61ff-45ed-8dac-35ea9ac1385f.PNG)
 
 
