@@ -37,7 +37,7 @@ crud를 다 적용시킬수 있음을 보여주려고 노력하였습니다.
 ![03](https://user-images.githubusercontent.com/96284736/177046629-2abea7a7-b9b4-4df9-a6a8-eb7ef30173fb.png)
 
 **헥사고날 아키텍처**<br/>
-```내 프로젝트의 article의 패키징<br/>```
+내 프로젝트의 article의 패키징<br/>
 ![zzzzz](https://user-images.githubusercontent.com/96284736/177046924-70c734bc-8157-4252-9852-175eaed14f1d.PNG)<br/>
 ```프로젝트 구조를 헥사고날 아키텍처로 하였습니다.```
 
