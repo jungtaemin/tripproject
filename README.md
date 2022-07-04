@@ -53,6 +53,8 @@ crud를 다 적용시킬수 있음을 보여주려고 노력하였습니다.
 
 ![ddsda](https://user-images.githubusercontent.com/96284736/177117932-7a2b073d-689c-4aff-b873-879f190402a8.PNG)
 
+![222222](https://user-images.githubusercontent.com/96284736/177118328-d9453773-4556-4a9d-9eb2-28cc04083ab7.PNG)
+
 
 
 # 프로젝트 후기
