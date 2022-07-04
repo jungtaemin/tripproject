@@ -68,7 +68,9 @@ crud를 다 적용시킬수 있음을 보여주려고 노력하였습니다.
 ## crud
 ### 글등록
 ![1p](https://user-images.githubusercontent.com/96284736/177152969-b177ce42-365c-45bc-8529-4c185846e29a.PNG)
+```게시글 1페이지```
 ![2p](https://user-images.githubusercontent.com/96284736/177152976-6c0c1fba-e31f-4cfc-81eb-9d8075f19d5a.PNG)
+```게시글 2페이지```
 ![게시판~](https://user-images.githubusercontent.com/96284736/177153177-59eee828-7906-4dd1-9034-1a1551b321e0.PNG)
 
 ### 글수정
