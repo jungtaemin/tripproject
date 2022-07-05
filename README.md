@@ -65,7 +65,7 @@ crud를 다 적용시킬수 있음을 보여주려고 노력하였습니다.
 ```articleForm을 만들어 먼저 view로 폼을 보내서 입력값을 받아 @Validated 로 validation을 적용.글의 내용과 제목을 다 적지않으면 글이 등록되지않으며 각각 제목을 적어주세요,내용을  오류메세지와함께 다시 작성폼으로 돌아온다.  ```
 
 
-## crud
+## CRUD
 ### 글등록
 ![1p](https://user-images.githubusercontent.com/96284736/177152969-b177ce42-365c-45bc-8529-4c185846e29a.PNG)
 ```게시글 1페이지```
