@@ -23,6 +23,7 @@ public interface ArticleRepositoryPort {
     public List<Article> findTop5ByOrderByIdDesc();
     public void deleteById(Long id);
     public Article findArticleById(Long id);
+    public  Page<Article> findAllByKeywordOrderById(Pageable pageable, String keyword);
 
 
 }
