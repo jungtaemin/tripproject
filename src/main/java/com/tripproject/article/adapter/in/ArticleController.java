@@ -141,6 +141,18 @@ public class ArticleController {
 
         return "redirect:/article/edit";
     }
+    
+     @GetMapping("/article/list/search")
+    public String getArticleList(@PageableDefault(size = 5, sort = "id", direction = Sort.Direction.DESC) Pageable pageable,
+                                 @RequestParam String keyword, Model model){
+
+        var articleList = articleQueriesUseCase.getArticleSearchByKeyword(pageable,keyword);
+
+        model.addAttribute("articleList", articleList);
+
+
+        return "article/articleListSearch";
+    }
 
 
 }
