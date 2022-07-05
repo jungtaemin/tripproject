@@ -23,6 +23,10 @@ public interface ArticleRepository extends JpaRepository<Article,Long> {
 
 
     Article findArticleById(Long articleId);
+    
+     @Query("select a from Article a where a.title like %:keyword% or a.content like %:keyword% order by a.id desc")
+    Page<Article> findAllByKeywordOrderById(Pageable pageable, @Param("keyword") String keyword);
+
 
 
 }
